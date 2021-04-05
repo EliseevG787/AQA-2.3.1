@@ -33,6 +33,7 @@ class DeliveryTest {
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[data-test-id='agreement']").click();
         $(".button").click();
+        $(byText("Успешно!")).shouldBe(visible);
         $("[data-test-id='date'] .input__control").doubleClick().sendKeys(secondMeetingDate);
         $(".button").click();
         $$(".button").find(exactText("Перепланировать")).click();
