@@ -87,7 +87,7 @@ class DeliveryTest {
         $("[data-test-id='phone'] input").setValue(invalidUser.getPhone());
         $("[data-test-id='agreement']").click();
         $$(".button").find(exactText("Запланировать")).click();
-        $(byText("Успешно!")).shouldBe(visible);
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldBe(visible);
     }
 
     @Test
